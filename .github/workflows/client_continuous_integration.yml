@@ -1,0 +1,24 @@
+name: client CI
+
+on:
+  pull_request:
+    paths:
+      - "client/**/*"
+
+jobs:
+  unit_test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x 
+    - name: yarn install, build, and test
+      run: |
+        cd client
+        yarn install
+        yarn build
+        yarn test
+      env:
+        CI: true
