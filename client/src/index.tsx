@@ -10,6 +10,6 @@ import './styles.scss';
  * custom React component.
  */
 ReactDOM.render(
-  <h1>Make something great!</h1>,
+  <h1>This is something great!</h1>,
   document.getElementById('root')
 );
