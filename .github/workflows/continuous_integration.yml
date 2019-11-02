@@ -3,7 +3,7 @@ name: API CI
 on:
   push:
     paths:
-      - "./api/**/*"
+      - "api/**/*"
 
 jobs:
   build:
